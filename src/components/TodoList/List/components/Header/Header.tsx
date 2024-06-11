@@ -12,9 +12,11 @@ const Header = () => {
     <div className={cx('header')}>
       <div className={cx('arrow-down')}></div>
 
-      <Title size="l" type="h1" className={cx('title')}>
-        What needs to be done?
-      </Title>
+      <input
+        type="text"
+        placeholder="What needs to be done?"
+        className={cx('input')}
+      />
     </div>
   );
 };

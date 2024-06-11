@@ -1,3 +1,9 @@
 .list {
   width: 60%;
+  min-width: 38.75rem;
+  overflow: hidden;
+}
+
+.body {
+  position: relative;
 }

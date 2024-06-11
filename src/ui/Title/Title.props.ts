@@ -2,7 +2,7 @@ export interface TitleProps {
   /**
    * Размер заголовка
    */
-  size: 'm' | 'l' | 'xxl';
+  size: 'l';
   /**
    * Цвет
    */

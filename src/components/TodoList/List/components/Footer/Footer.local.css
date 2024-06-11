@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.625rem;
 
-  padding: 10px;
+  border-top: 1px solid var(--border-base);
 }
 
 .tabs {
@@ -11,5 +12,5 @@
   justify-content: space-between;
   align-items: center;
 
-  gap: 12px;
+  gap: 0.75rem;
 }

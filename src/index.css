@@ -2,11 +2,27 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: none;
+  font-size: 1rem;
+}
+
+:root {
+  --text-base: #363b44;
+  --text-secondary: #92989b;
+
+  --background-base: #f0f0f0;
+  --background-secondary: #d3d3d3;
+
+  --border-base: #c5c5c5;
+
+  --font-main: Roboto, Helvetica, Arial, sans-serif;
 }
 
 html, body, body > div {
   width: 100%;
   height: 100%;
+
+  font-family: var(--font-main);
 }
 
 body > div {

@@ -1,0 +1,63 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+
+  border-top: 1px solid var(--border-base);
+}
+
+.item-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+
+  border-radius: 100%;
+  border: 1px solid var(--border-base);
+  cursor: pointer;
+
+  &--completed {
+    border-color: #90ee90;
+  }
+}
+
+.tick-mark {
+  position: relative;
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.tick-mark::before {
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  height: 50%;
+  width: 3px;
+
+  background-color: #90ee90;
+  content: '';
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+.tick-mark::after {
+  position: absolute;
+  left: -0.125rem;
+  bottom: 0;
+  height: 0.188rem;
+  width: 100%;
+  background-color: #90ee90;
+  content: '';
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+.title {
+  &--completed {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+  }
+}
