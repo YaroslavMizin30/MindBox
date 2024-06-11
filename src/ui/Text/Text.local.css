@@ -1,0 +1,12 @@
+.text {
+  font-size: 16px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.primary {
+  color: #363b44;
+}
+
+.secondary {
+  color: #92989b;
+}

@@ -5,8 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "test": "run tests",
-    "run start": "webpack-dev-server --env mode=development",
-    "run build": "webpack --env mode=production"
+    "start": "webpack-dev-server --env mode=development",
+    "build": "webpack --env mode=production"
   },
   "repository": {
     "type": "git",

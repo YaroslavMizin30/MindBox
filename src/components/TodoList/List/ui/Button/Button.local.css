@@ -1,0 +1,13 @@
+.button {
+  box-sizing: border-box;
+  padding: 5px 10px;
+
+  font-size: 16px;
+  color: #363b44;
+  background: none;
+  border: 1px solid transparent;
+
+  &:hover, &--active {
+    border: 1px solid #c5c5c5;
+  }
+}
