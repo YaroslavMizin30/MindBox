@@ -48,7 +48,7 @@ const Footer: FC<FooterProps> = (props) => {
 
   const handleCompletedItemsDelete = () => {
     onClearButtonClick('completed');
-  }
+  };
 
   return (
     <div className={cx('footer')}>

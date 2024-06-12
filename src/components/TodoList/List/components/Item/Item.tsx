@@ -1,4 +1,4 @@
-import React, { memo, FC, useEffect } from 'react';
+import React, { memo, FC } from 'react';
 import classNames from 'classnames/bind';
 
 import Title from '@ui/Title/Title';
@@ -19,10 +19,6 @@ const Item: FC<ItemProps> = memo((props) => {
 
     onItemMark(newStatus, id);
   };
-
-  useEffect(() => {
-    console.log(children);
-  }, [status, isVisible]);
 
   if (isVisible) {
     return (
