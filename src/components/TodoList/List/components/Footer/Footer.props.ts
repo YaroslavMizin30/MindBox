@@ -1,20 +1,15 @@
+import { TodoStatus, CurrentListItemsType } from '@components/TodoList';
+
 export interface FooterProps {
   /**
    * Колбэк на показ активных
    */
-  onActiveButtonClick: () => void;
-  /**
-   * Колбэк на показ всех
-   */
-  onAllButtonClick: () => void;
-  /**
-   * Колбэк на показ выполненных
-   */
-  onCompletedButtonClick: () => void;
+  onItemsFilterClick: (status: CurrentListItemsType) => void;
   /**
    * Колбэк на клик по кнопке очистки
+   * выполненных
    */
-  onClearButtonClick: () => void;
+  onClearButtonClick: (status: `${TodoStatus}`) => void;
   /**
    * Количество задач
    */

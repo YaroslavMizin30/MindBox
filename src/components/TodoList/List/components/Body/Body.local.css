@@ -1,0 +1,6 @@
+.body {
+  position: relative;
+  max-height: 60vh;
+
+  overflow: scroll;
+}

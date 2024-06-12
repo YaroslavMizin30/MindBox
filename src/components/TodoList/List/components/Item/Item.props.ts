@@ -1,10 +1,12 @@
-export interface ItemProps {
+import { TodoListItem } from "@components/TodoList";
+
+export interface ItemProps extends TodoListItem {
   /**
-   * Флаг, активна ли сейчас задача
+   * Флаг, нужно ли показывать айтем
    */
-  isCompleted: boolean;
+  isVisible: boolean;
   /**
-   * Текст задачи
+   * Колбэк на нажатие по марке.
    */
-  children: string;
+  onItemMark: (status: TodoListItem['status'], id: string) => void;
 }

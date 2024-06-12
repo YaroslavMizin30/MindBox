@@ -1,11 +1,11 @@
 import React, { FC, useState } from 'react';
 import classNames from 'classnames/bind';
 
-import { FooterProps } from './Footer.props';
-
 import Text from '@ui/Text/Text';
 
 import Button from '../../ui/Button/Button';
+
+import { FooterProps } from './Footer.props';
 
 import styles from './Footer.local.css';
 
@@ -18,18 +18,12 @@ enum ActiveButton {
 }
 
 const Footer: FC<FooterProps> = (props) => {
-  const {
-    onAllButtonClick,
-    onActiveButtonClick,
-    onCompletedButtonClick,
-    onClearButtonClick,
-    itemsNumber = '',
-  } = props;
+  const { onItemsFilterClick, onClearButtonClick, itemsNumber = '' } = props;
 
   const [active, setActive] = useState<`${ActiveButton}`>(ActiveButton.ALL);
 
   const handleAllButtonClick = () => {
-    onAllButtonClick();
+    onItemsFilterClick('all');
 
     if (active !== ActiveButton.ALL) {
       setActive(ActiveButton.ALL);
@@ -37,7 +31,7 @@ const Footer: FC<FooterProps> = (props) => {
   };
 
   const handleActiveButtonClick = () => {
-    onActiveButtonClick();
+    onItemsFilterClick('active');
 
     if (active !== ActiveButton.ACTIVE) {
       setActive(ActiveButton.ACTIVE);
@@ -45,12 +39,16 @@ const Footer: FC<FooterProps> = (props) => {
   };
 
   const handleCompletedButtonClick = () => {
-    onCompletedButtonClick();
+    onItemsFilterClick('completed');
 
     if (active !== ActiveButton.COMPLETED) {
       setActive(ActiveButton.COMPLETED);
     }
   };
+
+  const handleCompletedItemsDelete = () => {
+    onClearButtonClick('completed');
+  }
 
   return (
     <div className={cx('footer')}>
@@ -79,7 +77,7 @@ const Footer: FC<FooterProps> = (props) => {
         </Button>
       </div>
 
-      <Button onClick={onClearButtonClick}>
+      <Button onClick={handleCompletedItemsDelete}>
         <Text>Clear completed</Text>
       </Button>
     </div>
