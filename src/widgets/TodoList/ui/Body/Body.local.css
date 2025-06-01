@@ -1,0 +1,16 @@
+.body-wrapper {
+  overflow: hidden;
+}
+
+.body {
+  position: relative;
+  overflow: scroll;
+
+  max-height: 60vh;
+
+  transition: margin 1s ease;
+
+  &--collapsed {
+    margin-top: -100%;
+  }
+}

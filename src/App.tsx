@@ -1,6 +1,6 @@
 import React from 'react';
 
-import List from '@components/TodoList';
+import List from '@widgets/TodoList';
 
 const App = () => {
   return <List />;

@@ -22,8 +22,8 @@
     "jsx": "react-jsx",
 
     "paths": {
-      "@ui/*": ["./src/ui/*"],
-      "@components/*": ["./src/components/*"],
+      "@shared/*": ["src/shared/*"],
+      "@widgets/*": ["src/widgets/*"],
     }
   },
   "ts-node": {

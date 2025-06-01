@@ -83,8 +83,8 @@ export default (env: Env): Configuration => {
       extensions: ['.tsx', '.ts', '.js'],
 
       alias: {
-        '@ui': path.resolve(__dirname, 'src/ui'),
-        '@components': path.resolve(__dirname, 'src/components'),
+        '@shared': path.resolve(__dirname, 'src/shared'),
+        '@widgets': path.resolve(__dirname, 'src/widgets'),
       },
     },
     devServer: {
