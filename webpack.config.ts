@@ -39,7 +39,7 @@ export default (env: Env): Configuration => {
 
   return {
     mode: mode ?? 'production',
-    entry: path.resolve(__dirname, 'src', 'index.tsx'),
+    entry: path.resolve(__dirname, 'index.js'),
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: '[name].[contenthash].js',
@@ -93,7 +93,7 @@ export default (env: Env): Configuration => {
     devtool: mode === Mode.DEVELOPMENT ? 'source-map' : undefined,
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src', 'index.html'),
+        template: path.resolve(__dirname, 'index.html'),
         scriptLoading: 'defer',
       }),
     ],
